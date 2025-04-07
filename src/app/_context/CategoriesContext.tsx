@@ -1,4 +1,5 @@
 "use client";
+import { BASE_URL } from "@/constants";
 import { FoodType } from "@/types";
 import {
   createContext,
@@ -23,7 +24,8 @@ export const CategoriesProvider = ({ children }: { children: ReactNode }) => {
   const [categories, setCategories] = useState<FoodType[]>([]);
 
   const getCategories = async () => {
-    const data = await fetch("http://localhost:4000/categories");
+    const data = await fetch(`${BASE_URL}/categories`, {
+      method: "GET"});
     const categories = await data.json();
     setCategories(categories.data);
     console.log(categories);
