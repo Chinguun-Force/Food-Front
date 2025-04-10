@@ -36,17 +36,17 @@ export default function Footer() {
             MENU
           </h1>
           <div className="flex flex-col gap-2">
-            {categories.slice(0, 5).map((item: any, index) => {
+            {/* {categories.slice(0, 5).map((item: any, index) => {
               return <p key={index}>{item.categoryName}</p>;
-            })}
+            })} */}
           </div>
         </div>
         <div className="flex flex-col gap-5">
           <h1></h1>
           <div className="mt-[25px] flex flex-col gap-2">
-            {categories.slice(5, 10).map((item: any, index) => {
+            {/* {categories.slice(5, 10).map((item: any, index) => {
               return <p key={index}>{item.categoryName}</p>;
-            })}
+            })} */}
           </div>
         </div>
         <div className="flex flex-col gap-5">

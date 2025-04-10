@@ -11,11 +11,12 @@ export default function RootLayout({
       <Image
         alt="img"
         src={
-          "https://res.cloudinary.com/dsvivujtj/image/upload/v1739850324/Frame_1321316047_iwsxvt.png"
+          "https://res.cloudinary.com/dl3wkodkk/image/upload/v1742867934/Food-Delivery%20Assets/488bb31d983ecd581caec983f3a32842_wytjk8.jpg"
         }
         width={856}
         height={904}
-        className="w-[856px] h-[904px]"
+        style={{objectFit: "cover"}}
+        className="w-[860px] h-[904px] rounded-lg"
       />
     </div>
   );

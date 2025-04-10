@@ -14,13 +14,13 @@ export default function OneCategoryFronts({
   useEffect(() => {
     getFoodsInfo();
   }, []);
-  console.log(foodsInfo);
+  console.log(foodsInfo, "foodsInfo");
 
   return (
     <div className="flex flex-col items-start py-8 px-32 gap-9">
       <h1 className="text-[30px] normal font-semibold ">{catoName}</h1>
       <div className="flex flex-wrap gap-10 ">
-        {foodsInfo
+        {/* {foodsInfo
           .filter((food) => food.category == categoryId)
           .map((item: any, index: any) => {
             return (
@@ -33,7 +33,7 @@ export default function OneCategoryFronts({
                 imgUrl={item.foodImg}
               />
             );
-          })}
+          })} */}
       </div>
     </div>
   );

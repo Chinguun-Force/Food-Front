@@ -7,7 +7,7 @@ export default function Catagories() {
         Categories
       </h1>
       <div className="flex flex-col w-full items-center py-8 px-12">
-        <CarouselSize />
+        {/* <CarouselSize /> */}
       </div>
     </div>
   );

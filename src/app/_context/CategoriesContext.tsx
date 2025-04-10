@@ -8,6 +8,7 @@ import {
   useEffect,
   useState,
 } from "react";
+import axios from "axios";
 type categoriesContextType = {
   categories: FoodType[];
   getCategories: () => void;
@@ -22,18 +23,15 @@ export const useCategories = () => {
 
 export const CategoriesProvider = ({ children }: { children: ReactNode }) => {
   const [categories, setCategories] = useState<FoodType[]>([]);
-
   const getCategories = async () => {
-    const data = await fetch(`${BASE_URL}/categories`, {
-      method: "GET"});
-    const categories = await data.json();
-    setCategories(categories.data);
-    console.log(categories);
-  };
+    const {data} = await axios.get(`${BASE_URL}/categories`);
+    setCategories(data.categories);
+  }
   useEffect(() => {
     getCategories();
   }, []);
-
+  console.log(categories);
+  
   return (
     <div>
       <CategoriesContext.Provider value={{ categories, getCategories }}>

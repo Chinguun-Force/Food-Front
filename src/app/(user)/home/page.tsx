@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 
-import { useCategories } from "@/app/_context/CategoriesContext";
+import { CategoriesContext, useCategories } from "@/app/_context/CategoriesContext";
 import Ads from "../_HomeComponents/Ads"; // Ensure the file '../_HomeComponents/Ads.tsx' exists or update the path to the correct location.
 import Catagories from "../_HomeComponents/Categories";
 import OneCategoryFronts from "../_HomeComponents/OneCategoryFront";
@@ -27,6 +27,15 @@ export default function Homepage() {
           );
         })}
       </div>
+      
+      <CategoriesContext value={{
+        categories: [],
+        getCategories: function (): void {
+          throw new Error("Function not implemented.");
+        }
+      }} />
+
+    
       <Footer />
     </div>
   );
